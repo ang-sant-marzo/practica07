@@ -1,0 +1,12 @@
+<div class="card l">
+    <h1>Ejemplo de directiva [ngClass]</h1>
+    <hr>
+    <div *ngFor="let jugador of jugadores">
+        <div *ngIf="jugador.equipo !== undefined" class="caja-jugador" [ngClass]="jugador.equipo">
+            {{jugador.nombre}}
+        </div>
+        <div *ngIf="jugador.equipo === undefined" class="caja-jugador sin-equipo">
+            {{jugador.nombre}}
+        </div>
+    </div>
+</div>

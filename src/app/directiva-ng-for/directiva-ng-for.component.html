@@ -1,0 +1,24 @@
+<div class="card l">
+    <h1>Ejemplo de directiva *ngFor</h1>
+    <hr>
+    <table>
+        <tr>
+            <th>Nº</th>
+            <th>Nombre</th>
+            <th>CIF</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let proveedor of proveedores; let i = index; let j = odd; let k = even; let l = last">
+            <td>{{i + 1}}</td>
+            <td>{{proveedor.nombre}}</td>
+            <td>{{proveedor.cif}}</td>
+            <td *ngIf="j">Impar</td>
+            <td *ngIf="k">Par</td>
+            <td *ngIf="l">Soy la última iteración</td>
+        </tr>
+        <!-- La propiedad odd devuelve true si el elemento es Impar
+        La propiedad odd devuelve true si el elemento es Impar 
+        La propiedad last devuelve true si es el último elemento iterado -->
+    </table>
+</div>
